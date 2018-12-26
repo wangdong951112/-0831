@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>css文本实例</title>
+	<style type="text/css">
+		body{
+			color: red;
+		}
+		h1{
+			color: black;
+			text-align: center;
+		}
+		p.ex{
+			color: rgb(0,0,255);
+		}
+		p.small{
+			line-height: 100%;
+		}
+		/*line-height 设置方法有三种 百分比，px，或者数值  默认分别为110%-120%  20px  1  */
+		p.big{
+			line-height: 200%;
+		}
+		h1#header2{
+			letter-spacing: -0.1em;
+		}
+		/*letter-spacing 字母间距  word-spacing 单词间距*/
+		h4{
+			letter-spacing: 20px;color: black;
+			text-decoration: underline;
+		}
+	</style>
+</head>
+<body>
+	<h1>这是 heading 1</h1>
+	<p>这是一段普通的段落。请注意，该段落的文本是红色的。在 body 选择器中定义了本页面中的默认文本颜色。</p>
+	<p class="ex">该段落定义了 class="ex"。该段落中的文本是蓝色的。</p>
+
+	<h1 id="header2">
+		This is header 2
+	</h1>
+	<h4>
+		This is header 4
+	</h4>
+	<p>
+		这是拥有标准行高的段落。
+		在大多数浏览器中默认行高大约是 110% 到 120%/20px/1
+		这是拥有标准行高的段落。
+		这是拥有标准行高的段落。
+		这是拥有标准行高的段落。
+		这是拥有标准行高的段落。
+		这是拥有标准行高的段落。
+	</p>
+
+	<p class="small">
+		这个段落拥有更小的行高。
+		这个段落拥有更小的行高。
+		这个段落拥有更小的行高。
+		这个段落拥有更小的行高。
+		这个段落拥有更小的行高。
+		这个段落拥有更小的行高。
+		这个段落拥有更小的行高。
+	</p>
+
+	<p class="big">
+		这个段落拥有更大的行高。
+		这个段落拥有更大的行高。
+		这个段落拥有更大的行高。
+		这个段落拥有更大的行高。
+		这个段落拥有更大的行高。
+		这个段落拥有更大的行高。
+		这个段落拥有更大的行高。
+	</p>
+	<h5 style="text-decoration:underline">This is header 5</h5>
+	<!--  text-decoration  文本修饰  属性值有 overline line-through underline blink none -->
+
+	color 设置文本颜色 
+	direction 设置文本方向。 
+	line-height 设置行高。 
+	letter-spacing 设置字符间距。 
+	text-align 对齐元素中的文本。 
+	text-decoration 向文本添加修饰。 
+	text-indent 缩进元素中文本的首行。 
+	text-shadow 设置文本阴影。CSS2 包含该属性，但是 CSS2.1 没有保留该属性。 
+	text-transform 控制元素中的字母。 
+	unicode-bidi 设置文本方向。 
+	white-space 设置元素中空白的处理方式。 
+	word-spacing 设置字间距。 
+
+
+</body>
+</html>

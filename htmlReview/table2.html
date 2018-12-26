@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<table border="1">
+		<tr>
+			<th>header 1</th>
+			<th>header 2</th>
+		</tr>
+		<tr>
+			<td>row1,cell1</td>
+			<td>row1,cell2</td>
+		</tr>
+		<tr>
+			<td>row2,cell1</td>
+			<td>row2,cell2</td>
+		</tr>
+	</table>
+	<hr>
+	<!-- 没有边框的表格  默认 border=0   -->
+	<table>
+		<tr>
+			<td>10</td>
+			<td>20</td>
+		</tr>
+		<tr>
+			<td>30</td>
+			<td>40</td>
+		</tr>
+		<tr>
+			<td>50</td>
+			<td>60</td>
+		</tr>
+	</table>
+	<!-- 表格中的表头 -->
+	<hr>
+	<h4>水平标题:</h4>
+	<table border="1">
+		<tr>
+		  	<th>Name</th>
+		  	<th>Telephone</th>
+		  	<th>Telephone</th>
+		</tr>
+		<tr>
+			 <td>Bill Gates</td>
+			 <td>555 77 854</td>
+			 <td>555 77 855</td>
+		</tr>
+	</table>
+
+	<h4>垂直标题:</h4>
+	<table border="1">
+		<tr>
+		  	<th>First Name:</th>
+		  	<td>Bill Gates</td>
+		</tr>
+		<tr>
+		  	<th>Telephone:</th>
+		  	<td>555 77 854</td>
+		</tr>
+		<tr>
+		  	<th>Telephone:</th>
+		  	<td>555 77 855</td>
+		</tr>
+	</table>
+	<!-- 带有标题的表格 -->
+	<hr>
+	<table border="1">
+		<caption>Monthly savings</caption>
+		<tr>
+			<td>1</td>
+			<td>2</td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td>4</td>
+		</tr>
+	</table>
+	<!-- 单元格合并 -->
+	<hr>
+	<h4>单元格跨两格:</h4>
+	<table border="1">
+	<tr>
+	  	<th>Name</th>
+	  	<th colspan="2">Telephone</th>
+	</tr>
+	<tr>
+	  	<td>Bill Gates</td>
+	  	<td>555 77 854</td>
+	  	<td>555 77 855</td>
+	</tr>
+	</table>
+
+	<h4>单元格跨两列:</h4>
+	<table border="1">
+	<tr>
+	  	<th>First Name:</th>
+	  	<td>Bill Gates</td>
+	</tr>
+	<tr>
+	  	<th rowspan="2">Telephone:</th>
+	  	<td>555 77 854</td>
+	</tr>
+	<tr>
+	  	<td>555 77 855</td>
+	</tr>
+	</table>
+	<!-- 表格内标签 -->
+	<hr>
+	表格内标签
+	<table border="1">
+		<tr>
+			<td>
+				<p>这是一个段落</p>
+				<p>这是另外一个段落</p>
+			</td>
+			<td>
+				这个单元格包含一个表格
+				<table border="1">
+					<tr>
+						<td>a</td>
+						<td>b</td>
+					</tr>
+					<tr>
+						<td>c</td>
+						<td>d</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				这是一个列表
+				<ul>
+					<li>apples</li>
+					<li>bananas</li>
+					<li>pineapples</li>
+				</ul>
+			</td>
+			<td>HELLOW</td>
+		</tr>
+	</table>
+	<!-- 单元格边距 -->
+	<hr>单元格边距
+	<h4>没有单元格边距:</h4>
+	<table border="1">
+		<tr>
+		  	<td>First</td>
+		  	<td>Row</td>
+		</tr>   
+		<tr>
+		  	<td>Second</td>
+		  	<td>Row</td>
+		</tr>
+	</table>
+	<h4>有单元格边距：</h4>
+	<table border="1;" cellpadding="10">
+		<tr>
+			<td>first</td>
+			<td>row</td>
+		</tr>
+		<tr>
+			<td>second</td>
+			<td>row</td>
+		</tr>
+	</table>
+	<!-- 单元格间距 -->
+	<h4>单元格间距：</h4>
+	<table border="1" cellspacing="10">
+		<tr>
+			<td>first</td>
+			<td>row</td>
+		</tr>
+		<tr>
+			<td>second</td>
+			<td>row</td>
+		</tr>
+	</table>
+	
+</body>
+</html>
