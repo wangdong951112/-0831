@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		/*var a = parseInt(Math.random()*99999);
+		var b = a.toString();
+
+
+		document.write(b+'<br>');
+		document.write(b[0]+b[1]+b[2]+b[3]+b[4]);*/
+
+	
+	
+	/*//作业1 随机生成一个五位以内的数，然后输出该数共有多少位，每位分别是什么？
+	var num = parseInt(Math.random()*99999); //随机数
+	var units = num % 10; //个位数
+	var dacade = parseInt((num % 100)/10); //十位数
+	var hundreds = parseInt((num % 1000)/100); //百位数
+	var thousands = parseInt((num % 10000)/1000); //千位数
+	var myriabit = parseInt(num / 10000); //万位数
+	var n;
+	if(myriabit){ //if嵌套判断num为几位数
+	  	n = 5;
+	}else if(thousands){
+	  	n = 4;
+	}else if(hundreds){
+	  	n = 3;
+	}else if(dacade){
+	  	n = 2;
+	}else if(units){
+	  	n = 1;
+	}else{
+	  	n = 0;
+	}	
+	document.write("随机数为："+num+'<br>'+"是"+n+"位数"+"，万位："+myriabit+"，千位："+thousands+"，百位："+hundreds+"，十位："+dacade+"，个位："+units+"<br>"); 		//输出随机数以及每位数的值*/
+		
+
+
+
+
+
+
+
+
+
+
+
+	/*
+	//作业2 和尚挑水问题
+	var i = 0; //挑水次数
+	function fn(j){ //定义变量j 即桶里能装多少水
+	  	if(j == 15){  //终止条件
+	  		return i;
+	  	}
+	  	i++; 			//挑水次数递增
+	  	fn(j-5); 		//挑水计数规则
+	}
+	fn(50);	  
+	document.write("共挑水"+i+"次"+"<br>");
+	
+	*/
+
+
+	/*//作业4
+	//在排序好的数组里插入一个数
+	
+	var arr = [1,2,3,4,5,6,7,8]
+	var a=
+	document.write(arr+"<br>");
+*/
+
+	/*
+	//数组去重
+	var arr=[1,2,3,1,6,4,6,41,13,1,1,4,1,45,45,46,461,45]
+	for(i = 0;i < arr.length-1;i ++){ 
+		for(j = i + 1;j < arr.length;j ++){
+			while(arr[i] == arr[j]){ //当两项相等时
+				arr.splice(j,1)		//删除j项
+			}
+		}
+
+	}
+	document.write(arr)
+	*/
+
+
+	/*
+	// 数组去重（老师）
+	var arr=[11,12,1,1,1,2,1,2,1,4,5,864,4,4,6,6,6,7]
+	arr.sort(); //数组重排
+	var arr2=[arr[0]]; //arr的第一项给arr2
+	for(i=0;i<arr.length;i++){ 
+		if(arr[i] != arr2[arr2.length-1]){ //用ar的每一项依次和arr2 的左后一项比较 
+			arr2.push(arr[i]);  //如果不一样就添加到arr2末尾
+		}
+	}
+	document.write(arr2+'<br>')*/
+
+	
+
+
+
+
+	/*
+	//作业4 开发一个游戏flip和flop
+	var a='Flip',b='Flop'; //定义a为字符flip b为flop
+	var arr=[];
+	for(i=1;i<=100;i++){
+			arr.push(i) //向数组内加入i的值
+		if(i % 3 == 0 ){ //当i为3的倍数时 替换为flip
+			arr.pop(i);		//删除该项
+			arr.push(a);	//插入flip
+		}else if(i % 5 == 0){//当i为5的倍数时 替换为flop
+			arr.pop(i);		//删除该项
+			arr.push(b);	//插入flop
+		}
+		if(i % 3 == 0&&i % 5 == 0){ 当i为3和5的倍数时 替换为flipflop
+			arr.pop(i);     //删除该项
+			arr.push(a+b);	//插入flipflop
+		}
+	}alert(arr);
+	*/
+
+	 /*
+	//
+	 //作业  向已经排序好的数组中插入新的数，重新排序
+	var arr=[60,-20,-5,6,3,-8,-40,0]
+	for(var i=0;i<arr.length-1;i++){//比对躺数
+        for(var j=i+1;j<arr.length;j++){
+            if(arr[i]>arr[j]){ //前面的大于后面的 》》》换位
+                var n=arr[i];  //储存x的值
+                arr[i]=arr[j];	//把x的值赋予y
+                arr[j]=n;		
+            }
+        }
+    }
+    document.write(arr);
+	function fNew(){
+		var a=Number(document.getElementById("t1").value)
+		arr.push(a);
+		for(var i=0;i<arr.length-1;i++){//比对躺数
+        	for(var j=i+1;j<arr.length;j++){
+            	if(arr[i]>arr[j]){ //前面的大于后面的》》》换位
+                	var n=arr[i];  //储存x的值
+                	arr[i]=arr[j];	//把x的值赋予y
+                	arr[j]=n;		
+            	}
+        	}
+    	}
+    document.getElementById('pa').innerHTML=(arr);
+	}
+	*/
+
+
+
+/*
+	// 生成第13位条形码
+	function fEan(){
+		var arr = document.getElementById("t2").value;
+		var aJs = 0;	//定义变量奇数项和
+		var aOs = 0;	//定义变量偶数项和
+		var sum = 0;	//定义变量奇数项的和与偶数项和的3倍的和
+		var ean13=0;	//13位条形码
+		for(i=0;i<arr.length;i++){
+			if(i % 2){ //偶数项相加
+				aOs+=Number(arr[i]);
+			}else{//奇数项相加
+				aJs+=Number(arr[i]);
+			}
+		}
+		sum=aOs*3 + aJs; //奇数项的和与偶数项和的3倍的和
+		var subu=parseInt(sum % 10);  //求出个位数
+		if(subu){    //判断是否为0
+			ean13 = 10 - subu;  //不为0则用10减去
+		}else{
+			ean13 = 0;  //为0就直接为0
+		}
+		document.getElementById('pb').innerHTML=('13位验证码为:'+arr+ean13)
+	}
+*/
+
+
+    /*var fi='Flip';//3的倍数
+	var fo='flop';//5的倍数
+
+	for(i = 1;i <= 100;i++){
+		if(i % 3 == 0 && i % 5 != 0)){
+			document.write(fi+'<br>');
+			continue;
+		}else if(i%5 == 0 && i%3 != 0){
+			document.write(fo+'<br>');
+			continue;
+		}
+		if(i%3 == 0 && i%5 == 0){
+			document.write(fi+fo+'<br>');
+			continue;
+		}else{
+			document.write(i+'<br>');
+		}			
+	}*/
+
+
+	</script>
+
+	<!--
+	<input type="text" placeholder='请输入要插入的数字' id='t1'/>
+	<button onclick="fNew()">新的数组</button>
+	<p id='pa'></p>
+
+	<input type="text" placeholder='请输入12位数' id='t2'/>
+	<button onclick='fEan()'>取出13位条形码</button>
+	<p id="pb"></p>
+
+	-->
+
+
+</body>
+</html>

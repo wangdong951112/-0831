@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>css链接 伪类</title>
+	<base href="" target="blank">
+	<style type="text/css">
+		a.one:link {color:#ff0000;}
+		a.one:visited {color:#0000ff;}
+		a.one:hover {color:#ffcc00;}
+
+		a.two:link {color:#ff0000;}
+		a.two:visited {color:#0000ff;}
+		a.two:hover {font-size:150%;}
+
+		a.three:link {color:#ff0000;}
+		a.three:visited {color:#0000ff;}
+		a.three:hover {background:#66ff66;}
+
+		a.four:link {color:#ff0000;}
+		a.four:visited {color:#0000ff;}
+		a.four:hover {font-family:'微软雅黑';}
+
+		a.five:link {color:#ff0000;text-decoration:none;}
+		a.five:visited {color:#0000ff;text-decoration:none;}
+		a.five:hover {text-decoration:underline;}
+		a.baidu:link,a.baidu:visited{
+			display:block;
+			font-weight:bold;
+			font-size:14px;
+			font-family:Verdana, Arial, Helvetica, sans-serif;
+			color:#FFFFFF;
+			background-color:#98bf21;
+			width:60px;
+			text-align:center;
+			padding:4px;
+			text-decoration:none;
+		}
+
+		a.baidu:hover,a.baidu:active
+		{
+		background-color:#7A991A;
+		}
+	</style>
+</head>
+<body>
+	<p>请把鼠标指针移动到下面的链接上，看看它们的样式变化。</p>
+	<p><b><a class="one" href="http://www.baidu.com">这个链接改变颜色</a></b></p>
+	<p><b><a class="two" href="http://www.baidu.com">这个链接改变字体尺寸</a></b></p>
+	<p><b><a class="three" href="http://www.baidu.com">这个链接改变背景色</a></b></p>
+	<p><b><a class="four" href="http://www.baidu.com">这个链接改变字体</a></b></p>
+	<p><b><a class="five" href="http://www.baidu.com">这个链接改变文本修饰</a></b></p>
+
+	<a class="baidu" href="http://www.baidu.com">百度</a>
+
+	a:link {color:#FF0000;}		/* 未被访问的链接 */
+	a:visited {color:#00FF00;}	/* 已被访问的链接 */
+	a:hover {color:#FF00FF;}	/* 鼠标指针移动到链接上 */
+	a:active {color:#0000FF;}	/* 正在被点击的链接 */
+	a:hover 必须位于 a:link 和 a:visited 之后 
+	a:active 必须位于 a:hover 之后 
+
+</body>
+</html>

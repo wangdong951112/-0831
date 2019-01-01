@@ -36,7 +36,6 @@ h2.title_name small {
 /* CONTAINER */
 .littleBoxes{
     width: 380px;
-    margin: 100px auto 380px auto;
     position: relative;
 }
 .littleBoxes div{

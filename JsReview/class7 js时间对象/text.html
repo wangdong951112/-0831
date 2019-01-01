@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="base.js"></script>
+	<script>
+		//var obj = new Object();
+		//引用类型、
+
+		//var obj={}; 
+		/*var obj=new Object();
+		obj.shuxing='我是一个属性呦！！';
+		obj.fangfa=function(){
+			alert(1);
+		}
+		obj.fangfa();
+		alert(obj.shuxing)*/
+
+
+		/*var obj=new Object();
+		obj.name='dongWang';
+		obj.age='18';
+		obj.height='1';
+		obj.weight='2';
+		obj.idCard='4111111111111'
+		obj.fangfa=function(){
+			alert('大家好，我是'+this.name+'我的年龄是'+this.age+'体重'+this.weight+'身份证'+this.idCard);
+		}
+		obj.fangfa()*/
+		/*var d= new Date();
+		alert('大哥成仙的时间'+d.getFullYear()+(d.getMonth()+1)+d.getDate());
+*/
+
+	//alert(getDate());
+	//alert(getMonthDate(11,2000));
+	</script>
+	
+</head>
+<body>
+	<!--
+	<p id="pa"></p>
+	<script>
+	var d=new Date();
+	setInterval(a(),100);
+	function a(){
+		var b=document.getElementById('pa');
+
+		b.innerHTML=(d.getFullYear()+'年'+(d.getMonth()+1)+'月'+d.getDate()+'日'+d.getHours()+'时'+d.getMinutes()+'分'+d.getSeconds()+'秒');
+	}
+	</script>
+-->
+	<div id="div1">
+		<input type="text" placeholder="起止年份">
+		<input type="text" placeholder="起止月份">		
+		<input type="text" placeholder="起止天数">
+		<br>
+		<input type="text" placeholder="结束年份">
+		<input type="text" placeholder="结束月份">
+		<input type="text" placeholder="结束日期">
+	</div>
+	<button id="btn1">计算日期差值</button>
+	<script>
+		var oBtn=document.getElementById('btn1');
+		var oWrap=document.getElementById('div1');
+		var aInput=oWrap.getElementsByTagName('Input')
+		oBtn.onclick=function(){
+			//分开6个input的值
+			var arrS=[];
+			var arrE=[];
+			for(i=0;i<aInput.length;i++){
+				if(i<3){
+					//起始日期
+					arrS.push(aInput[i].value)
+				}else{//终止日期
+					arrE.push(aInput[i].value)
+				}
+			}
+		var sDate=arrS.join('/')
+		var eDate=arrE.join('/')
+		//join()
+	//把数组的每一项以一个字符分割，并返回一个字符串;
+		var d=new Date();
+		var sTime=Date.parse(sDate);
+		var eTime=Date.parse(eDate);
+		//返回1970年1月1日到设置时间的毫秒数
+		var resDay=Math.abs((sTime-eTime)/1000/60/60/24)
+		//运算换算成天数
+		alert(resDay);
+		}
+	</script>
+</body>
+</html>

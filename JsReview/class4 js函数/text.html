@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script></script>
+	<script>
+		/*
+		//用函数输出10个九九乘法表 
+		function fn(){
+			for(var i=1;i<10;i++){
+		    	for(j=1;j<=i;j++){
+		    		document.write(j+'*'+i+'='+i*j+' ');
+		    	}
+		    	document.write('<br/>')
+		    }
+		}
+		for(var a=0;a<10;a++){
+			fn();
+		}*/
+
+
+		/*function fnHover(){
+			document.write('hello');
+		}
+		function fnOver(){
+			document.write('world');
+		}*/
+
+
+		/*function fnClick(){// 函数声明
+			var oInput=document.getElementById('text1');// 获取input  id
+			alert(oInput.value) // 弹出输出文本框的内容
+		}*/
+
+
+		/*
+		function fnA(a,b){//形参 
+			alert(a+'++'+b)
+		}
+		var b=123,c=4645;
+		fnA(b,c);//实参
+		*/
+
+
+		/*function add(a,b){
+			return a+b;
+		}
+		function getValue(){
+			var oInput1=document.getElementById('t1').value;
+			var oInput2=document.getElementById('t2').value;
+			var value1=Number(oInput1);
+			var value2=Number(oInput2);
+			alert(add(value1,value2));
+		}*/
+
+ 	function isTrue(year,month,day){
+	 	if(month>0&&month<=12){
+	 		switch(month){
+	            case 1:
+	            case 3:
+	            case 5:
+	            case 7:
+	            case 8:
+	            case 10:
+	            case 12:if (day>31||day<1) {
+	                return("错误的日期")
+	            }else{
+	                return("正确的日期")
+	            }
+	            break;
+
+	            case 2:if (year%4==0&&year%100!=0||year%400==0) {
+	                if(day>29||day<1){
+	                    return("错误的日期")
+	                }else{
+	                    return("正确的日期")
+	                }
+	            }else{
+	                if(day>28||day<1){
+	                    return("错误的日期")
+	                }else{
+	                    return("正确的日期")
+	                }
+	            }
+
+	            default:if(day>30||day<1){
+	                return("错误的日期")
+	            }else{
+	                return("正确的日期")
+	            }
+	        }
+	 	}else{
+	 		return('请输入正确的月份')
+	 	}
+	}
+		
+	function getValue2(){
+		var oInput1=document.getElementById('t1').value;
+		var oInput2=document.getElementById('t2').value;
+		var oInput3=document.getElementById('t3').value;
+		var value1=Number(oInput1);
+		var value2=Number(oInput2);
+		var value3=Number(oInput3);
+		// alert(isTrue(value1,value2,value3));
+		document.getElementById('aa').innerHTML=isTrue(value1,value2,value3);
+	}
+		
+
+	</script>
+	
+</head>
+<body>
+	 <!--
+	<input type="text" id="t1">+
+	<input type="text" id="t2">
+	<button onclick="getValue()">点击</button>
+	<br><br><br><br>-->
+	
+	<!--
+	<input type="text" palceholder="" id="text1">
+	<input type="button" value="点击" onclick="fnClick()">
+	-->
+
+	
+	 
+	<input type="text" id="t1">年
+	<input type="text" id="t2">月
+	<input type="text" id="t3">日
+	<button onClick="getValue2()">判断日期是否正确</button>
+	<p style="color:#f00;">判断结果：</p>
+	<p id='aa' style="color:#f0f;font-size:25px;"></p>
+
+	
+</body>
+</html>

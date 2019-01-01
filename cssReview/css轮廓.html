@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>css轮廓</title>
+	<style type="text/css">
+	p{
+		border:red solid thin;
+	}
+	p.one
+	{
+	border:red solid thin;
+	outline-style:solid;
+	outline-width:thin;
+	}
+	p.two
+	{
+	border:red solid thin;
+	outline-style:dotted;
+	outline-width:3px;
+	}
+	p.dotted {outline-style: dotted}
+	p.dashed {outline-style: dashed}
+	p.solid {outline-style: solid}
+	p.double {outline-style: double}
+	p.groove {outline-style: groove}
+	p.ridge {
+		outline-style: ridge;
+		outline-color:#00ff00;
+	}
+	p.inset {outline-style: inset}
+	p.outset {outline-style: outset}
+	</style>
+</head>
+<body>
+	<p class="one">This is some text in a paragraph.</p>
+	<p class="two">This is some text in a paragraph.</p>
+	<p class="dotted">A dotted outline</p>
+	<p class="dashed">A dashed outline</p>
+	<p class="solid">A solid outline</p>
+	<p class="double">A double outline</p>
+	<p class="groove">A groove outline</p>
+	<p class="ridge">A ridge outline</p>
+	<p class="inset">An inset outline</p>
+	<p class="outset">An outset outline</p>
+	<p><b>注释：</b>只有在规定了 !DOCTYPE 时，Internet Explorer 8 （以及更高版本） 才支持 outline-width 属性。</p>
+	
+	outline 在一个声明中设置所有的轮廓属性。 
+	outline-color 设置轮廓的颜色。 
+	outline-style 设置轮廓的样式。 
+	outline-width 设置轮廓的宽度。 
+
+</body>
+</html>

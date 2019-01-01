@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<!--
+	<input type="text" id="t1">
+	<button onclick="fn()">点我</button>
+	<script>
+
+	var str=document.getElementById('t1');
+
+	/*function fn(){
+		var hStr=str.value.replace('说出大哥的外号','超级无敌螺旋霹雳飞跃阿姆斯特朗');
+		alert(hStr);
+	} */
+	/*function fn(){
+		var hStr=str.value.replace('fuck','***');
+		alert(hStr);
+	}
+*/
+	</script>
+
+	<input type="text" id="txt1">
+    <select id="opt">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+    </select>
+    <input type="text" id="txt2">
+    <input type="button" value="计算" id="resBtn">
+    <script>
+        
+    //1.第一个数字 2.第二个数字 3.运算符
+
+    //获取第一个数字（这个数字在一个输入框里） 
+    var oBtn =document.getElementById('resBtn');
+
+    oBtn.onclick=function(){
+
+        //1.取值部分。 什么时候要取值???   什么时候需要计算
+
+        var num1 = Number(document.getElementById('txt1').value);
+        var num2 = Number(document.getElementById('txt2').value);
+        var opt  = document.getElementById('opt').value;
+
+        alert(res(num1,num2,opt));
+
+
+    } 
+
+    //运算并返回结果
+
+    //2.运算部分（返回结果）
+
+    function res(a,b,opt){   
+        switch(opt){
+            case '+':return a + b;
+            break;
+            case '-':return a - b;
+            break;
+            case '*':return a * b;
+            break;
+            case '/':return a / b;
+            break;
+        }
+    }
+
+
+
+ </script>
+
+
+
+
+<button onclick="bt()">获取验证码</button>
+<input type="text" value="6666"  id="txt" />
+
+	<script> //获取4位验证码
+	function bt(){
+	var b=document.getElementById('txt');
+	var num=parseInt(Math.random()*10000)
+		if(num<1000){
+			num=parseInt(Math.random()*10000);
+			b.value=num;
+		}else{
+			b.value=num;
+		}		
+	}
+</script>
+-->
+	<script>
+		/*function a(){
+			b()
+			alert('1')
+		}
+		a();
+		function b(){
+			alert('2')
+		}*/
+		function btnClick(){
+			var oName = document.getElementById("name");
+			var oPname = document.getElementById("password");
+			var oSp = document.getElementById("sp");
+			//清楚掉两个文本中的空格
+			var sName = oName.value.replace(/ /g, "");
+			var sPname = oPname.value.replace(/ /g, "");
+			//取出用户名第一个字符
+			var unChar = sName.charAt(0);
+			if(unChar >= '0' && unChar <= '9'){
+				oSp.innerHTML = "用户名首字母不可以是数字!";
+			}else if(sName.length == 0){
+				oSp.innerHTML = "用户名不能为空!";
+			}else if(sName.length < 6 || sName.length > 20){
+				oSp.innerHTML = "用户名长度应该不小于6并且不大于20！";
+			}else if(sPname.length == 0){
+				oSp.innerHTML = "密码不能为空！";
+			}
+			//将处理完空格的文本替换掉原来错误的文本
+			//替换文本框中的值
+			oName.value = sName;
+			oPname.value = sPname;
+		}
+
+	</script>
+	<span id="sp" style="color:#f00;"></span>
+	<input type="text" placeholder = "用户名" onblur = "btnClick()" id="name">
+	<input type="text" placeholder = "密码" onblur = "btnClick()" id="password">
+	<button onClick = "btnClick()">登录</button>
+
+</body>
+</html>

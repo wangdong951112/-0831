@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+.btn{
+	background:none;
+	border: 1px solid #b6b6b6;
+	display: block;
+	height: 40px;
+	margin: 40px auto;
+}
+
+
+	</style>
+</head>
+<body>
+	<div id="div1">
+		
+		<input type="text" placeholder='起始年份'>
+		<input type="text" placeholder='起始月份'>
+		<input type="text" placeholder='起始日'>||
+		<input type="text" placeholder='终止年份'>
+		<input type="text" placeholder='终止月份'>
+		<input type="text" placeholder='终止日'>
+
+
+	</div>
+
+	<input type="button" value='计算日期差距' id="btn1" class="btn" onclick='jisuanriqi()'>
+</body>
+<script>
+
+
+	var oBtn = document.getElementById('btn1');
+
+	var oWrap = document.getElementById('div1');
+
+	//标签选择器
+
+	var aInput = oWrap.getElementsByTagName('input');
+
+	//console.log(aInput)
+
+	oBtn.onclick = function(){
+
+		// alert(1);
+
+		//分开6个input框中的值
+
+		var arrS = [];
+		var arrE = [];
+
+		for(var i = 0 ; i < aInput.length; i++){
+
+			if(i < 3){
+				//起始日期
+				arrS.push(aInput[i].value)
+
+			}else{
+				//终止日期
+
+				arrE.push(aInput[i].value)
+
+			}
+			
+
+		}
+
+		var sDate = arrS.join('/');
+		var eDate = arrE.join('/');
+
+		var d = new Date();
+
+		var sTime = Date.parse(sDate);
+
+		var eTime = Date.parse(eDate);
+
+		//运算换算成天数
+
+		var rDay = Math.abs((sTime - eTime)/1000/60/60/24)
+
+
+		alert(rDay)
+
+
+
+		//alert(sDate+":"+eDate)
+
+
+	}
+
+
+
+
+
+
+
+
+
+
+	
+	/*function jisuanriqi(){
+
+		var oDiv=document.getElementById('div1');
+		var aInput=oDiv.getElementsByTagName('input');
+		var qishiArr=[];
+		var zhongzhiArr=[];
+		for(var i = 0 ; i < aInput.length ; i ++){
+			if(i<3){
+				qishiArr[i]=aInput[i].value;
+			}else{
+				zhongzhiArr[i]=aInput[i].value;				
+			}			
+		}
+		var str1=qishiArr.join('/');
+		var str2=zhongzhiArr.join('/');
+		var d1=new Date(str1);
+		var d2=new Date(str2);
+
+		var days=Math.abs(d1.getTime()-d2.getTime());
+		alert(days)
+
+	}
+*/
+
+</script>
+</html>

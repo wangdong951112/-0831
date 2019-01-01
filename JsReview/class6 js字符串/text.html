@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+
+        <style>
+
+        *{
+            margin: 0 ;
+            padding: 0;
+            font-family: '微软雅黑';
+        }
+
+
+        .wrap{
+
+            width: 197px;
+            height: 320px;
+            padding: 20px 20px 0;
+            margin-right: 1px;
+            overflow: hidden;
+            border: 1px solid #b6b6b6;
+            float: left;
+        }
+
+        .pic_wrap{
+        
+            width: 180px;
+            height: 180px;
+            margin: 0 auto;
+
+        } 
+        .pic_wrap img{
+            width: 100%;
+            height: 100%;
+        } 
+
+        .title{
+            margin: 0 auto;
+            height: 52px;
+            line-height: 24px;
+            width: 180px;
+            overflow: hidden;
+        }     
+
+        .price{
+            
+            height: 30px;
+            padding: 10px;
+
+        }    
+
+        .price span{
+    
+            color: #f52e1f;
+			margin-left: 50px;
+            line-height: 30px;
+            font-size: 25px;
+    
+        }
+        .container{
+            width: 80%;
+            margin:0 auto;
+        }
+
+
+        </style>
+
+    </head>
+    <body>
+    <div class="container" id='rongqi'>
+        
+        <!-- 
+
+
+        <div class="wrap">
+                <div class="pic_wrap">
+                
+                    <img src="images/demo.jpg" alt="">
+        
+                </div>
+        
+                <div class="title">
+                        
+                        <p>【京东超市】欧莱雅（LOREAL）精油润养润发乳200ml（新老包装随机发货）</p>
+        
+                </div>
+        
+        
+                <div class="price">
+                    
+                        <span>￥9.9</span>
+        
+                </div>
+                
+        
+        </div> 
+
+
+        -->
+
+
+
+
+</div>
+<script>
+	var arr=[1.9,2.9,3.9,4.9,5.9,6.9,7.9,8.9,9.9,10.9];
+	var arr2=[1,2,3,4,5,6,7,8,9,10]
+	var oCont=document.getElementById('rongqi');//.选择了一个元素
+	var html='';
+	for(i=0;i<arr.length;i++){
+		//字符串拼接 >>>拼接数据在改变 将拼接放在for循环里 >>>>建立一个数组来存放数据（用下标来去数组中的数据>>>用i 来代替）
+		html+='<div class="wrap"><div class="pic_wrap"><img src="images/demo'+arr2[i]+'.jpg" alt=""></div><div class="title"><p>【京东超市】欧莱雅（LOREAL）精油润养润发乳200ml（新老包装随机发货）</p></div><div class="price"><span>￥'+arr[i]+'</span></div></div>';
+	}
+	oCont.innerHTML=html;
+
+</script>
+</body>
+</html>

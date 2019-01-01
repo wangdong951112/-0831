@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+/*		var a=1
+		while(a<5){//逻辑点 //当为false值是时停止循环
+			alert(a);
+			a++;
+		}*/
+
+
+
+/*		var a=0;
+		while(a<100){ //当a小于100时执行下面语句
+			a++;
+			if(a==1||a==3||a==5){//当a为135时跳过循环
+				continue;
+			}
+			document.write(a+' ');//打印a
+			if(a%10==0){ //当a为10的倍数时换行
+				document.write('<br/>');
+			}
+			
+		}
+
+
+*/	
+
+/*	var sum=0;
+	for(var a=0;a<100;a++){
+		if(a%2==0){
+			sum+=a;
+		}
+		a++
+	}
+	alert(sum)*/
+	/*//100以内偶数的和
+
+	var a=0,sum=0;
+	while(a<=100){ 
+		if(a % 2 ==0){ //偶数
+			sum+=a;//求和
+		}
+		a++;
+	}
+	document.write('100以内偶数的和：'+sum);
+*/
+
+
+	// 7的倍数
+/*
+	for(var a=0;a<100;a++){
+		if(a%7==0){
+			document.write(a+'<br>')
+		}
+	} 
+
+
+
+// 打印5行星星
+
+	for(var a=1;a<=50;a++){
+		document.write('*');
+		if(a%10==0){
+			document.write('<br>')
+		}
+	}
+*/
+/*//倒三角
+	var a=10;
+	for(var i=a;i>=1;i--){
+		for(var j=i-1;j>=1;j--){
+			document.write('* ');
+		}
+		document.write('<br>')
+	}*/
+
+/*	var a=10;
+	for(var i=a;i>=1;i--){
+		for(var j=i-1;j--){
+			document.write('*')
+		}
+		document.write('<br>')
+	}
+*/
+	 // 正三角
+
+	/*var a=6;
+ 	for(var i=0;i<a;i++){
+		for(var j=0;j<i+1;j++){
+			document.write('* ')
+		}
+		for(var k=j-a;k<a;k++){
+			document.write('- ')
+		}
+		document.write('<br>')
+	}
+*/
+
+/*	
+	//右上反三角
+
+	var a=10;
+ 	for(var i=0;i<a;i++){
+		for(var j=0;j<i+1;j++){
+			document.write('- ')
+		}
+		for(var k=j-1;k<a;k++){
+			document.write('* ')
+		}
+		document.write('<br>')
+	}
+*/
+	/*
+	//右下反三角
+	var a=10;
+ 	for(var i=0;i<a;i++){
+		for(var j=a;j>i;j--){
+			document.write('- ')
+		}
+		for(var k=0;k<i+1;k++){
+			document.write('* ')
+		}
+		document.write('<br>')
+	}
+*/	
+	
+
+	
+	/*//等边三角 
+	var a=6;
+	for(var i=1;i<a;i++){
+		for(var j=0;j<6-i;j++){
+			document.write('&nbsp');
+		}
+		for(var k=0;k<2*i-1;k++){
+			document.write('＊');
+		}
+		document.write('<br>')
+	}*/
+	
+	
+
+
+/*	 //右下倒三角
+	var second = 6;   
+    while(second > 0){//执行6次
+        var num = 0;
+        while(num < 7){
+            if(num < second){
+                document.write('-');
+            }else{
+                document.write('*');
+            }
+            num++;
+        }
+        document.write('<br>');
+        second--;
+    }*/
+
+
+    
+
+    
+	/*//老师讲的while方法
+    var second = 6;   
+    while(second > 0){//执行6次
+        var num = 0;
+        while(num < 10){
+            if(num < second){
+                document.write('*');
+            }else{
+                document.write('-');
+            }
+            num++;
+        }
+        document.write('<br>');
+        second--;
+    }*/
+
+   /*
+
+   //打印100~200之间能被3或7整除的数 
+   for(var i=100;i <= 200;i++){
+    	if(i % 3 == 0||i % 7==0){
+    		document.write(i+' ');
+    	}
+    }
+    */
+
+
+/*
+    //计算1~99的和
+    var sum=0;
+    for(var i=1;i<100;i++){
+    	if(i%2==1){  //取出奇数
+    		sum+=i; //求和
+    	}
+    }
+    document.write(sum);
+*/
+
+
+	/*//九九乘法表
+    for(var i=1;i<10;i++){
+    	for(j=1;j<=i;j++){
+    		document.write(j+'*'+i+'='+i*j+' ');
+    	}
+    	document.write('<br/>')
+    }
+	*/
+	for(var i=1;i<10;i++){
+
+		for(var j=1;j<=i;j++){
+			document.write(j+'*'+i+'='+i*j=' ');
+		}
+		document.write('<br>');
+	}
+
+	/*//九九乘法表完整版
+    for(var i=1;i<10;i++){
+    	for(j=1;j<10;j++){
+    		document.write(j+'*'+i+'='+i*j+' ');
+    	}
+    	document.write('<br/>')
+    }
+	*/
+
+
+
+	/*
+	//20-80之间能被3整除的整数，5个一行
+	for(var i=20,j=0;i<=80;i++){
+		
+		if(i%3==0){
+			document.write(i+' ');
+			j++;
+		}
+		if(j%5==0){
+			document.write('<br/>');
+		}
+	}*/
+
+
+
+
+
+	</script>
+</head>
+<body>
+	<!--
+	<p>i=10;j=10 求i+j=</p>
+	<button onclick="mysum()">按钮</button>
+	
+	<div id="ww">的撒打算</div>
+	<script>
+		function mysum(){
+			var i=10;
+			var j=10;
+			var sum=i+j;
+			alert(sum);
+
+		}  
+		var a=document.getElementById('ww')
+		a.innerHTML="王东"
+	</script>
+	-->
+</body>
+
+</html>

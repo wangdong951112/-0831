@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		/*
+		var arr=[1,2,3,4,5,4] //通常储存同一类型的数据；
+			//项数 
+			//下标  通过下标取得数组中的某一个项数. 计算机计数 0开始；
+			//length属性 他是人类计数从1开始数组的项数总数；
+			// 向数组中储存数字，字符串，||数组 ，对象
+			// for in 循环中 i 代表下标
+
+		for(var i in arr){
+			document.write(arr[i]);
+		}
+		document.write('<br>');
+		for(var j=0;j<arr.length;j++){
+			document.write(arr[j]);
+		}
+		var b=['王东','dadasd','dsadasd','dasdas','41302619951102181X'];
+		b.forEach(function(element,index,Arr){
+			document.write(element);
+		})
+		*/
+
+
+		
+		//
+		/*var arr=[60,-20,-5,6,3,-8,-40,0]
+        for(var i=0;i<arr.length-1;i++){//比对躺数
+            for(var j=i+1;j<arr.length;j++){
+                if(arr[i]>arr[j]){ //前面的大于后面的 》》》换位
+                    var n=arr[i];  //储存x的值
+                    arr[i]=arr[j];	//把x的值赋予y
+                    arr[j]=n;		
+                }
+            }
+        }
+    	document.write(arr);*/
+/*
+    	function oCl(){
+    		var arr=['莱昂纳多小沈阳','罗伯特宋小宝','迈克尔刘能','尼古拉斯赵四']
+    	var index=Math.round(Math.random()*(arr.length-1));
+    	alert(arr[index]);
+    	}
+    	*/
+		
+
+		/*var arr=[];
+		for(i=1;i<=100;i++){
+			if(i%3==0||i%7==0){
+				 arr.push(i);      
+			}	
+		}document.write(arr);*/
+
+
+		/*
+		//倒叙排列
+		var arr=[1,24,5,6,7,8,890,212,5465,4,4,54];
+		var index=arr.length;
+		var arr2=[];
+		for(var i=0;i<index;i++){
+			arr2.push(arr.pop())
+		}
+		document.write(arr2)
+		*/
+
+
+		/*
+		// 随机生成0~15之间的数
+		for(var i = 0 ; i < 5; i++){
+	        arr[i] = Math.round(Math.random()*15);
+	    }
+	    alert(arr);
+		*/
+
+/*
+		//选择排序 
+		var arr=[3,4,5,1,2]
+		for(var i=0;i<arr.length;i++){
+			var min=arr[i];
+			var index=i;
+			for(var j=i+1;j<arr.length;j++){
+				if(arr[j]<min){
+					min=arr[j];
+					index=j;
+				}
+			}
+			arr[index]=arr[i];
+			arr[i]=min;
+		}
+		document.write(arr);*/
+		function fEan(){
+		var arr = document.getElementById("t2").value;
+		var aJs = 0;	//定义变量奇数项和
+		var aOs = 0;	//定义变量偶数项和
+		var sum = 0;	//定义变量奇数项的和与偶数项和的3倍的和
+		var ean13=0;	//13位条形码
+		for(i=0;i<arr.length;i++){
+			if(i % 2 == 1){ //偶数项相加
+				aOs+=Number(arr[i]);
+			}else if(i % 2 == 0){//奇数项相加
+				aJs+=Number(arr[i]);
+			}
+		}
+		sum=aOs*3 + aJs; //奇数项的和与偶数项和的3倍的和
+		var subu=parseInt(sum % 10);  //求出个位数
+		if(subu){    //判断是否为0
+			ean13 = 10 - subu;  //不为0则用10减去
+		}else{
+			ean13 = 0;  //为0就直接为0
+		}
+		document.getElementById('pb').innerHTML=('13位验证码为:'+arr+ean13)
+		}
+
+	</script>
+</head>
+<body>
+	<button onclick="oCl()">随机点名</button>
+	<input type="text" placeholder='请输入12位数' id='t2'/>
+	<button onclick='fEan()'>取出13位条形码</button>
+	<p id="pb"></p>
+
+	
+</body>
+</html>

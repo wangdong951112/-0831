@@ -20,8 +20,8 @@
             position:relative;
         }
         #myDiv .float_lay{
-            width:50px;
-            height:50px;
+            width:49px;
+            height:49px;
             border:1px solid #000;
             position:absolute;
             opacity:0.3;
@@ -35,8 +35,8 @@
             top:0;
             left:200px;
             overflow:hidden;
-            width:250px;
-            height:250px;
+            width:111.5px;
+            height:111.5px;
             border:1px solid #000;
             display:none;
         }
@@ -74,7 +74,11 @@
             var bigPic=$('#myDiv .bigPic img').width();
             var percentL;
             var percentT;
-            <!--这样写是最好的，不然会卡顿-->
+
+            // 450 > 200 
+            // 200 50  > 150 
+
+            // <!--这样写是最好的，不然会卡顿-->
             if(picLeft<0){
                 picLeft=0;
             }else if(picLeft>148){
@@ -86,8 +90,9 @@
                 picTop=148;
             }
             $('#myDiv .float_lay').css({top:picTop+'px',left:picLeft+'px'});
-            percentL=-picLeft/148*(bigPic-seePic);
-            percentT=-picTop/148*(bigPic-seePic);
+            percentL=-picLeft/150*(bigPic-seePic);
+            percentT=-picTop/150*(bigPic-seePic);
+
             $('#myDiv .bigPic img').css({marginTop:percentT+'px',marginLeft:percentL+'px'});
         });
     });
